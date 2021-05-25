@@ -10,7 +10,7 @@ import Modules from '../modules/index';
   providers: [AppService],
   imports: [
     ConfigModule.forRoot({
-      envFilePath: './config/.env'
+      envFilePath: `./config/${process.env.NODE_ENV}.env`
     }),
     DatabaseModule,
     ...Modules
